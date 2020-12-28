@@ -5,7 +5,7 @@ LABEL description = "Python3 and web.py container"
 
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends python3
-RUN apt-get install -y --no-install-recommends python3-pip
+RUN apt-get install -y python3-pip
 RUN apt-get clean
 
 # Definbe ENV files
@@ -15,6 +15,6 @@ ENV requirements /home/requirements.txt
 COPY requirements.txt ${requirements}
 
 # Install python packages
-RUN pip install -r /home/requirements.txt
+RUN pip3 install -r /home/requirements.txt
 
 RUN rm -rf /var/lib/apt/lists/*
