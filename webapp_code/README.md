@@ -15,5 +15,5 @@ docker run --rm -p 8080:8080 --name=webapp webapp:latest
 ## Stop webapp
 
 ```
-$docker stop webapp
+docker stop webapp
 ```
